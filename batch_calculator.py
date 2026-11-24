@@ -9,8 +9,6 @@ from calculator import add, subtract, multiply, divide
 
 def process_calculation(operation, a_text, b_text):
     
-    raise NotImplementedError("Complete process_calculation for the coursework")
-
     status = "OK"
     result = 0
     error_code = ""
@@ -54,3 +52,4 @@ def process_calculation(operation, a_text, b_text):
     Check errors in order: UNKNOWN_OPERATION, INVALID_NUMBER, DIVISION_BY_ZERO.
     See the brief for the full contract. You may add small helper functions.
     """
+    raise NotImplementedError("Complete process_calculation for the coursework")
