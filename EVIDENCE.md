@@ -16,7 +16,7 @@ submit the final CI run as a separate PDF or screenshot.
 
 ## 1. Starting point and Git review
 
-- Starting commit: [hash before coursework changes]
+- Starting commit: 3a2d3575415db80a77d04aec8dad1abc1c6278c0 [hash before coursework changes]
 - Reused lab files, tests and examples: [identify and acknowledge]
 - Feature branch and PR: [name, URL and saved PR file in evidence/]
 - Self-review: [what you checked in the diff and the outcome]

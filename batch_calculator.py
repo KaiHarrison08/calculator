@@ -8,6 +8,42 @@ from calculator import add, subtract, multiply, divide
 
 
 def process_calculation(operation, a_text, b_text):
+    
+    raise NotImplementedError("Complete process_calculation for the coursework")
+
+    status = "OK"
+    result = 0
+    error_code = ""
+    valid = True
+
+    if operation != "add" and operation != "subtract" and operation != "multiply" and operation != "divide":
+        error_code = "UNKNOWN_OPERATION"
+        status = "ERROR"
+        result = ""
+        valid = False
+    elif a_text == "" or b_text =="":
+        error_code = "INVALID_NUMBER"
+        status = "ERROR"
+        result = ""
+        valid = False
+
+    if valid == True:
+        if operation == "add":
+            result = add(a_text, b_text)
+        elif operation == "subtract":
+            result = subtract(a_text, b_text)
+        elif operation == "multiply":
+            result = multiply(a_text, b_text)
+        if operation == "divide":
+            if b_text == 0:
+                error_code = "DIVISION_BY_ZERO"
+                status = "ERROR"
+                result = ""
+            else:
+                result = divide(a_text, b_text)
+
+    return (status, result, error_code)
+
     """Return (status, result, error_code) for one calculation.
 
     Inputs are strings. Trim whitespace and use the four imported lab functions.
@@ -18,4 +54,3 @@ def process_calculation(operation, a_text, b_text):
     Check errors in order: UNKNOWN_OPERATION, INVALID_NUMBER, DIVISION_BY_ZERO.
     See the brief for the full contract. You may add small helper functions.
     """
-    raise NotImplementedError("Complete process_calculation for the coursework")
