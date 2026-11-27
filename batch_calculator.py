@@ -14,7 +14,7 @@ def process_calculation(operation, a_text, b_text):
     error_code = ""
     valid = True
 
-    if operation != "add" and operation != "subtract" and operation != "multiply" and operation != "divide":
+    if operation != "+" and operation != "-" and operation != "*" and operation != "/":
         error_code = "UNKNOWN_OPERATION"
         status = "ERROR"
         result = ""
@@ -26,13 +26,13 @@ def process_calculation(operation, a_text, b_text):
         valid = False
 
     if valid == True:
-        if operation == "add":
+        if operation == "+":
             result = add(a_text, b_text)
-        elif operation == "subtract":
+        elif operation == "-":
             result = subtract(a_text, b_text)
-        elif operation == "multiply":
+        elif operation == "*":
             result = multiply(a_text, b_text)
-        if operation == "divide":
+        if operation == "/":
             if b_text == 0:
                 error_code = "DIVISION_BY_ZERO"
                 status = "ERROR"
@@ -53,3 +53,13 @@ def process_calculation(operation, a_text, b_text):
     See the brief for the full contract. You may add small helper functions.
     """
     raise NotImplementedError("Complete process_calculation for the coursework")
+
+def main():
+	while True:
+		a = float(input("First number: "))
+		op = input("Operator (+ - * /): ")
+		b = float(input("Second number: "))
+		print(process_calculation(op, a, b))
+
+if __name__ == "__main__":
+	main()
