@@ -16,10 +16,10 @@ submit the final CI run as a separate PDF or screenshot.
 
 ## 1. Starting point and Git review
 
-- Starting commit: 3a2d3575415db80a77d04aec8dad1abc1c6278c0 [hash before coursework changes]
-- Reused lab files, tests and examples: [identify and acknowledge]
-- Feature branch and PR: [name, URL and saved PR file in evidence/]
-- Self-review: [what you checked in the diff and the outcome]
+- Starting commit: 3a2d3575415db80a77d04aec8dad1abc1c6278c0
+- Reused lab files, tests and examples: Reused tests include the pytest function and it's implementation / the calculator and test_calculator.py scripts are referenced in my new scripts / The yamal file used for continuous integration is reused from the calculator directory
+- Feature branch and PR: The branch I am using is named coursework, url = https://github.com/KaiHarrison08/calculator/tree/coursework
+- Self-review: New files have been added to the repository in the new coursework branch
 
 ## 2. Test failure, diagnosis and fix
 
